@@ -37,7 +37,7 @@ def predict():
     else:
         category='old model'
 
-    return render_template('index.html', prediction_text='{}'.format(category))
+    return render_template('index.html', prediction_text='Yours mobile is at {} one'.format(category))
 
 
 if __name__ == "__main__":
