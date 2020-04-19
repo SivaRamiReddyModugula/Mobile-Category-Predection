@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile Catigory Predection</title>
+  </head>
+  <body>
+    <div align="center">
+      <h1 style="align-items: center;">Mobile Category Predection</h1>
+      <form action="{{ url_for('predict')}}" method="POST">
+        <table>
+          <tr>
+            <td>Ram</td>
+            <td>
+              <input
+                type="text"
+                name="ram"
+                placeholder="Enter your ram size in KB's"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>PX Height</td>
+            <td>
+              <input
+                type="text"
+                name="px_height"
+                placeholder="Enter your Phone Height in mm"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Battery Power</td>
+            <td>
+              <input
+                type="text"
+                name="battery_power"
+                placeholder="Enter your Phone Battery capicity in 1000"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Px Width</td>
+            <td>
+              <input
+                type="text"
+                name="px_width"
+                placeholder="Enter your Phone Battery width in mm"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Mobile Weight</td>
+            <td>
+              <input
+                type="text"
+                name="mobile_wt"
+                placeholder="Enter your Phone weight in grms"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Memory</td>
+            <td>
+              <input
+                type="text"
+                name="int_memory"
+                placeholder="Enter your Phone Memory size"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>SC W</td>
+            <td>
+              <input
+                type="text"
+                name="sc_w"
+                placeholder="Enter your Phone sc_w"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Talk Time</td>
+            <td>
+              <input
+                type="text"
+                name="talk_time"
+                placeholder="Enter your Phone's talk time"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>FC Score</td>
+            <td>
+              <input
+                type="text"
+                name="fc"
+                placeholder="Enter your Phone Fc score"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>SC H</td>
+            <td>
+              <input
+                type="text"
+                name="sc_h"
+                placeholder="Enter your Phone sc_h score"
+                required="required"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <button type="submit">Predict</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <label
+                >Your\'s mobile is: <b>{{prediction_text}}</b> Category</label
+              >
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
